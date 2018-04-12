@@ -26,7 +26,7 @@ __global__ void gpuRectOutlines( T* input, T* output, int width, int height,
 	const float fx = x;
 	const float fy = y;
 	
-	const float thick = 10.0f;
+	const float thick = 50.0f;
 	const float alpha = color.w / 255.0f;
 	const float ialph = 1.0f - alpha;
 	

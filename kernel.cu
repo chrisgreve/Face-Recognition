@@ -159,7 +159,7 @@ void convertROI(float* input, float* output, char* mean, const int* srcSize, con
     dim3 dimBlock(32,32);
     dim3 dimGrid(dstSize[2]/dimBlock.x+1, dstSize[1]/dimBlock.y+1);
 
-    std::cout << "ROI: " << bbox_x << " " << bbox_y << " " << bbox_w << " " << bbox_h << std::endl;
+//    std::cout << "ROI: " << bbox_x << " " << bbox_y << " " << bbox_w << " " << bbox_h << std::endl;
 
     kernel_extract_roi <<< dimGrid, dimBlock, 0, stream >>> (input, output, mean,
                        srcSize[2], dstSize[2], dstSize[1],

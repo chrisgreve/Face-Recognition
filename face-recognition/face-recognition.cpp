@@ -95,9 +95,9 @@ std::vector<std::string> loadLabelInfo(const char* filename)
 bool DrawBoxes(float* input, float* output, uint32_t width, uint32_t height, const float scale_x, const float scale_y, float* conf, float* bbox, const int numBoundingBoxes)
 {
     // Only handle single class here
-    const float4 color = make_float4( 0.0f, 255.0f, 175.0f, 100.0f);
+    const float4 color = make_float4( 0.0f, 255.0f, 175.0f, 40.0f);
 
-    printf("%i bounding boxes detected\n", numBoundingBoxes);
+    //printf("%i bounding boxes detected\n", numBoundingBoxes);
     for( int n=0; n < numBoundingBoxes; n++ )
     {
         float* bb = bbox + (n * 4);
@@ -105,7 +105,7 @@ bool DrawBoxes(float* input, float* output, uint32_t width, uint32_t height, con
         bb[1] *= scale_y;
         bb[2] *= scale_x;
         bb[3] *= scale_y;
-        printf("bounding box %i   (%f, %f)  (%f, %f)  w=%f  h=%f\n", n,  bb[0], bb[1], bb[2], bb[3], bb[2] - bb[0], bb[3] - bb[1]);
+        //printf("bounding box %i   (%f, %f)  (%f, %f)  w=%f  h=%f\n", n,  bb[0], bb[1], bb[2], bb[3], bb[2] - bb[0], bb[3] - bb[1]);
     }
 
     if( numBoundingBoxes>0 )
