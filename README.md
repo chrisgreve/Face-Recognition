@@ -22,7 +22,7 @@ JetPack-3.1
 ```C
 Login as nvidia
 $ sudo apt-get install git cmake
-$ cd ~; git clone https://github.com/AastaNV/Face-Recognition
+$ cd ~; git clone https://github.com/chrisgreve/Face-Recognition
 $ cd Face-Recognition
 $ mkdir build
 $ cd build
